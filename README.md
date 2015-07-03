@@ -1,8 +1,10 @@
 # social-book
 RESTful web service with Jersey
 
-Run:
+Run: 
+
 $ cd social-book
+
 $ mvn jetty:run
 
-goto localhost:9999/socialbook in your brower
+goto localhost:9999/socialbook in your browser
