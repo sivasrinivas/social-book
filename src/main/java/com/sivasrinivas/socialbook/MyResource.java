@@ -1,5 +1,5 @@
 
-package com.sivasrinivas;
+package com.sivasrinivas.socialbook;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
