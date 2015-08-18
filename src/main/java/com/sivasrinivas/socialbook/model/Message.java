@@ -1,32 +1,31 @@
 package com.sivasrinivas.socialbook.model;
 
-import java.util.Date;
+import org.codehaus.jackson.map.annotate.JsonRootName;
 
 /**
  * @author samara
  */
+@JsonRootName("Message")
 public class Message {
 
-    private int id;
+    private long id;
     private String author;
-    private Date dateCreated;
     private String message;
 
     public Message() {
     }
 
-    public Message(int id, String author, String message) {
+    public Message(long id, String author, String message) {
         this.id = id;
         this.author = author;
-        this.dateCreated = new Date();
         this.message = message;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -36,14 +35,6 @@ public class Message {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    public Date getDateCreated() {
-        return dateCreated;
-    }
-
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
     }
 
     public String getMessage() {
