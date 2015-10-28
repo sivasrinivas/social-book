@@ -25,6 +25,3 @@ target/
 
 # Gradle
 .gradle/
-
-# Boku
-state/

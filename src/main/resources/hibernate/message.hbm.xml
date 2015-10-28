@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.sivasrinivas.socialbook.model.Message" table="message" catalog="siva">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="author" type="java.lang.String">
+            <column name="author" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="message" type="java.lang.String">
+            <column name="message" length="3000" not-null="true" unique="true" />
+        </property>
+        <property name="date" type="org.joda.time.contrib.hibernate.PersistentDateTime">
+            <column name="createdDate" not-null="false" unique="false" />
+        </property>
+    </class>
+</hibernate-mapping>

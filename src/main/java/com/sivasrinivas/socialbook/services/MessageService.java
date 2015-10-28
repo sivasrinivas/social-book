@@ -2,6 +2,7 @@ package com.sivasrinivas.socialbook.services;
 
 import com.sivasrinivas.socialbook.database.Database;
 import com.sivasrinivas.socialbook.model.Message;
+import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,17 @@ public class MessageService {
 
     public Message addMessage(Message message) {
         message.setId(messages.size() + 1);
+        message.setDate(new DateTime());
         messages.put(message.getId(), message);
+
+//        //Hibernate
+//        Session session = HibernateUtil.getSessionFactory().openSession();
+//
+//        session.beginTransaction();
+//        session.save(message);
+//        session.getTransaction().commit();
+
+
         return  message;
     }
 

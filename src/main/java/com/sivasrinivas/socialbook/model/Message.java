@@ -1,16 +1,16 @@
 package com.sivasrinivas.socialbook.model;
 
-import org.codehaus.jackson.map.annotate.JsonRootName;
+import org.joda.time.DateTime;
 
 /**
  * @author samara
  */
-@JsonRootName("Message")
 public class Message {
 
     private long id;
     private String author;
     private String message;
+    private DateTime date;
 
     public Message() {
     }
@@ -19,6 +19,7 @@ public class Message {
         this.id = id;
         this.author = author;
         this.message = message;
+        this.date = new DateTime();
     }
 
     public long getId() {
@@ -43,5 +44,13 @@ public class Message {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public DateTime getDate() {
+        return date;
+    }
+
+    public void setDate(DateTime date) {
+        this.date = date;
     }
 }

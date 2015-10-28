@@ -14,16 +14,20 @@ import javax.ws.rs.core.MediaType;
 
 import com.sivasrinivas.socialbook.model.Message;
 import com.sivasrinivas.socialbook.services.MessageService;
+import com.sun.jersey.api.core.InjectParam;
+import org.springframework.stereotype.Component;
 
 /**
  * @author sivasrinivas
  */
+@Component
 @Path("messages")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class MessageResource {
 
-    private static MessageService messageService = new MessageService();
+    @InjectParam
+    private MessageService messageService;
 
     @GET
     public List<Message> getAllMessage() {
